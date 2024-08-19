@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-full</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .main {height: 100vh; width: 100%;}
+        .main .swiper-slide {height: 100vh; font-size: 5rem;}
+        .main .s1 {background: saddlebrown ;}
+        .main .s2 {background: salmon;}
+        .main .s3 {background: sandybrown;}
+        .main .s4 {background: seagreen;}
+        .main .s5 {background: silver;}
+        .main .s6 {background: skyblue;}
+        .main .s2 .best_item {width: 500px; margin: 0 auto; background: white;}
+        .main .s2 .best_item .swiper-slide {height: 200px;}
+    </style>
+</head>
+<body>
+    <div class="swiper main">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide s1">1</div>
+            <div class="swiper-slide s2">
+                <h1>best</h1>
+                <div class="swiper best_item">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">best1</div>
+                        <div class="swiper-slide">best2</div>
+                        <div class="swiper-slide">best3</div>
+                    </div>
+                </div>
+                <a href="#">더보기</a>
+            </div>
+            <div class="swiper-slide s3">3</div>
+            <div class="swiper-slide s4">4</div>
+            <div class="swiper-slide s5">5</div>
+            <div class="swiper-slide s6">6</div>
+        </div>
+    </div>
+    <script>
+        const mainS = new Swiper(".main",{
+            direction:'vertical',
+            mousewheel:true,
+        })
+        const best = new Swiper('.best_item')
+    </script>
+</body>
+</html>
